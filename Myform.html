@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account registration form</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<style>
+html, body {
+min-height: 100%;
+}
+body, div, form, input, select, p { 
+padding: 0;
+margin: 0;
+outline: none;
+background-color: #eee;
+font-family: Roboto, Arial, sans-serif;
+font-size: 14px;
+color: #666;
+}
+h1 {
+margin: 0;
+font-weight: 400;
+}
+h3 {
+margin: 40px 0;
+color: #bf42a6;
+}
+.main-block {
+display: flex;
+justify-content: center;
+align-items: center;
+background: #fff;
+}
+form {
+width: 100%;
+padding: 25px;
+}
+fieldset {
+border: none;
+border-top: 1px solid #bf42a6;
+
+}
+.account-details, .personal-details {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.account-details >div, .personal-details >div >div {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+.account-details >div, .personal-details >div, input, label {
+width: 100%;
+}
+label {
+padding: 0 5px;
+text-align: right;
+vertical-align: middle;
+}
+input {
+padding: 10px;
+vertical-align: middle;
+background-color: #eee;
+border: 1px solid #000;
+}
+.checkbox {
+margin-bottom: 10px;
+}
+select, .children, .gender, .bdate-block {
+width: calc(100% + 26px);
+padding: 5px 0;
+}
+select {
+background: transparent;
+}
+.gender input {
+width: auto;
+} 
+.gender label {
+padding: 0 5px 0 0;
+} 
+.bdate-block {
+display: flex;
+justify-content: space-between;
+}
+.birthdate select.day {
+width: 35px;
+}
+.birthdate select.mounth {
+width: calc(100% - 94px);
+}
+.birthdate input {
+width: 38px;
+vertical-align: unset;
+}
+.checkbox input, .children input {
+width: auto;
+margin: -2px 10px 0 0;
+}
+.checkbox a {
+color: #bf42a6;
+}
+.checkbox a:hover {
+color: #bf42a6;
+}
+button {
+width: 100%;
+padding: 10px 0;
+margin: 10px auto;
+border-radius: 5px; 
+border: none;
+background: #bf42a6;
+font-size: 14px;
+font-weight: 600;
+color: #fff;
+}
+button:hover {
+background: #4c34b5;
+}
+@media (min-width: 568px) {
+.account-details >div, .personal-details >div {
+width: 50%;
+}
+label {
+width: 40%;
+}
+input {
+width: 60%;
+}
+select, .children, .gender, .bdate-block {
+width: calc(60% + 16px);
+}
+}
+</style>
+</head>
+
+<body>
+<div class="main-block">
+<form action="/">
+<h1>Create a free account</h1>
+<fieldset>
+    <legend>
+    <h3>Personal & Company Information</h3>
+    </legend>
+    <div class="account-details">
+        <div><label>Company Name*</label><input type="text" name="name" required></div>
+        <div>
+            <label>Location (State)*</label> 
+            <select required>
+            <option value="">-select location-</option>
+            <option value="1">Abia</option>
+            <option value="2">Adamawa</option>
+            <option value="3">Akwa Ibom</option>
+            <option value="4">Anambra</option>
+            <option value="5">Bauchi</option>
+            <option value="6">Bayelsa</option>
+            <option value="7">Benue</option>
+            <option value="8">Borno</option>
+            <option value="9">Cross River</option>
+            <option value="10">Delta</option>
+            <option value="11">Ebonyi</option>
+            <option value="12">Edo</option>
+            <option value="13">Ekiti</option>
+            <option value="14">Enugu</option>
+            <option value="15">Gombe</option>
+            <option value="16">Imo</option>
+            <option value="17">Jigawa</option>
+            <option value="18">Kaduna</option>
+            <option value="19">Kano</option>
+            <option value="20">Kastina</option>
+            <option value="21">Kebbi</option>
+            <option value="22">Kogi</option>
+            <option value="23">Kwara</option>
+            <option value="24">Lagos</option>
+            <option value="25">Nasarawa</option>
+            <option value="26">Niger</option>
+            <option value="27">Ogun</option>
+            <option value="28">Ondo</option>
+            <option value="29">Osun</option>
+            <option value="30">Oyo</option>
+            <option value="31">Plateau</option>
+            <option value="32">Rivers</option>
+            <option value="33">Sokoto</option>
+            <option value="34">Taraba</option>
+            <option value="35">Yobe</option>
+            <option value="36">Zamfara</option>
+            </select>
+            </div>
+        <div><label>Company Website</label><input type="text" name="name" required></div>
+        <div><label>Contact Email*</label><input type="email" name="email"></div>
+      
+        <div>
+            <label>Company Industry*</label> 
+            <select required>
+            <option value="">-select industry-</option>
+            <option value="20">ICT / Telecommunication</option>
+            <option value="2">Healthcare / Medical</option>
+            <option value="13">Hospitality</option>
+            <option value="Advertising / Branding / PR">Advertising / Branding / PR</option>
+            <option value="14">Insurance</option>
+            <option value="37">Internet / E-commerce</option>
+            <option value="33">Janitorial Services / Environment</option>
+            <option value="15">Law / Legal</option>
+            <option value="22">Logistics and Transportation</option>
+            <option value="6">Manufacturing / Production / FMCG</option>
+            <option value="7">Media / Radio / TV</option>
+            <option value="9">NGO / Non-Profit Associations</option>
+            <option value="5">Oil and Gas / Marine</option>
+            <option value="8">Agriculture / Agro-Allied</option>
+            <option value="27">Aviation / Airline</option>
+            <option value="18">Banking / Financial Services</option>
+            <option value="39">Blockchain</option>
+            <option value="12">Building / Construction</option>
+            <option value="17">Consulting</option>
+            <option value="3">Creative / Arts</option>
+            <option value="4">Education / Teaching</option>
+            <option value="1">Engineering / Technical</option>
+            <option value="19">Food Services</option>
+            <option value="24">General</option>
+            <option value="11">Government</option>
+            <option value="31">Online Sales / Marketing</option>
+            <option value="28">Pharmaceuticals</option>
+            <option value="34">Power / Energy</option>
+            <option value="32">Professional / Social Associations</option>
+            <option value="38">Raffle</option>
+            <option value="25">Real Estate</option>
+            <option value="29">Religious</option>
+            <option value="35">Research</option>
+            <option value="23">Sales / Retail</option>
+            <option value="36">Science</option>
+            <option value="26">Security</option>
+            <option value="21">Travel and Tours</option>
+            </select>
+            </div>
+           
+            <div><label>Contact Name*</label><input type="text" name="name" required></div>
+            
+            <div><label>Company Address</label><input type="text" name="name"></div>
+            <div><label>Phone No*</label><input type="email" name="email"></div>
+           
+    </div>
+    </fieldset>
+    <fieldset>
+    <legend>
+    <h3>Job Details</h3>
+    </legend>
+    <div class="personal-details">
+    <div>
+    <div><label>Job Title*</label><input type="text" name="name" required></div>
+    <div><label>Specialization*</label><input type="text" name="name" required></div>
+    <div><label>Application Deadline</label><input type="date" id="birthday" name="birthday"></div>
+  
+    <div>
+    <label>Min Experience*</label> 
+    <select>
+        <option value="">Select</option>
+        <option value="">Not specified</option>
+        <option value="0">0 year</option>
+        <option value="1">1 year</option>
+        <option value="2">2 years</option>
+        <option value="3">3 years</option>
+        <option value="4">4 years</option>
+        <option value="5">5 years</option>
+        <option value="6">6 years</option>
+        <option value="7">7 years</option>
+        <option value="8">8 years</option>
+        <option value="9">9 years</option>
+        <option value="10">10 years</option>
+        <option value="11">11 years</option>
+        <option value="12">12 years</option>
+        <option value="13">13 years</option>
+        <option value="14">14 years</option>
+        <option value="15">15 years</option>
+        <option value="16">16 years</option>
+        <option value="17">17 years</option>
+        <option value="18">18 years</option>
+        <option value="19">19 years</option>
+        <option value="20">20 years</option>
+        <option value="21">21 years</option>
+        <option value="22">22 years</option>
+        <option value="23">23 years</option>
+        <option value="24">24 years</option>
+        <option value="25">25 years</option>
+    </select>
+    </div>
+    <div>
+        <label>Max Experience*</label> 
+        <select>
+            <option value="">Select</option>
+            <option value="">Not specified</option>
+            <option value="0">0 year</option>
+            <option value="1">1 year</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+            <option value="8">8 years</option>
+            <option value="9">9 years</option>
+            <option value="10">10 years</option>
+            <option value="11">11 years</option>
+            <option value="12">12 years</option>
+            <option value="13">13 years</option>
+            <option value="14">14 years</option>
+            <option value="15">15 years</option>
+            <option value="16">16 years</option>
+            <option value="17">17 years</option>
+            <option value="18">18 years</option>
+            <option value="19">19 years</option>
+            <option value="20">20 years</option>
+            <option value="21">21 years</option>
+            <option value="22">22 years</option>
+            <option value="23">23 years</option>
+            <option value="24">24 years</option>
+            <option value="25">25 years</option>
+        </select>
+        </div>
+    
+    </div>
+    <div>
+    <div>
+  
+    </div>
+    <div>
+        <label>Min Qualification*</label> 
+        <select>
+        <option value="">Select Qualification</option>
+        <option value="1">First School Leaving Certificate</option>
+        <option value="2">Secondary School (SSCE)</option>
+        <option value="3">NCE</option>
+        <option value="4">OND</option>
+        <option value="5">BA/BSc/HND</option>
+        <option value="6">MBA/MSc/MA</option>
+        <option value="7">PhD/Fellowship</option>
+        <option value="8">Vocational</option>
+        <option value="9">Others</option>
+        </select>
+        </div>
+    <div>
+    <label>Monthly Salary (optional)</label> 
+        <select required>
+        <option value="">Select</option>
+        <option value="1">₦30,000 - ₦50,000</option>
+        <option value="2">₦50,000 - ₦100,000</option>
+        <option value="3">₦100,000 - ₦150,000</option>
+        <option value="4">₦150,000 - ₦200,000</option>
+        <option value="5">₦200,000 - ₦300,000</option>
+        <option value="6">₦300,000 - ₦400,000</option>
+        <option value="7">₦400,000 - ₦500,000</option>
+        <option value="8">₦500,000 - ₦750,000</option>
+        <option value="9">₦750,000 - ₦1,000,000</option>
+        <option value="10">Above ₦1,000,000</option>
+    </select>
+    </div>
+    <div><label>(Job Description, Requirements, Method of Application plus any other info)</label>
+    <textarea rows="10" cols="60" class="form-control" name="comment" form="usrform" >
+        Enter text here...</textarea></div>
+        <div><label>Application Email/Website</label><input type="text" name="name" required></div>
+    </div>
+    </div>
+    </fieldset>
+    <fieldset>
+    <legend>
+    <h3>Terms and Mailing</h3>
+    </legend>
+    <div class="terms-mailing">
+    <div class="checkbox">
+    <input type="checkbox" name="checkbox"><span>I accept the <a href="#">Terms & Conditions</a></span>
+    </div>
+    <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+  
+    </fieldset>
+
+
+<button type="submit" href="/">Submit</button>
+</form>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</div> 
+<p style="color: #000; text-align: center; letter-spacing: 2px;">Designed By Dev.Balikis.Omolewa</p>
+</body>
+</html>
+
